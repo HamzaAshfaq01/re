@@ -21,6 +21,9 @@ app.use(cors());
 // import & pass in route middleware 
 import authRoute from "./routes/authRoute.js";
 import adsRoute from "./routes/adsRoute.js";
+app.use("/test", (req,res)=>{
+      res.json("Testing")
+});
 app.use("/api/v1", authRoute);
 app.use("/api/v1", adsRoute);
 
